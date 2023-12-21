@@ -97,3 +97,30 @@ Given an integer array `nums` representing the amount of money of each house, re
 `};`
 <br/>
 <br/>
+
+## Explanation:
+
+I've created a function called `rob` that takes an array `nums` as input, representing the amount of money in each house. The goal is to determine the maximum amount of money that can be robbed without alerting the police.
+<br/>
+
+Inside the function, there is a helper function called `helpRob` that takes two parameters: `start` (representing the starting index) and `house` (representing the current house being considered).
+<br/>
+
+Within `helpRob`, there are two base cases: if the current house is less than the starting index, it returns `0`, indicating that all houses have been considered and no money can be robbed. If the maximum amount of money that can be robbed from the current house has already been calculated and stored in `dp`, it returns that value.
+<br/>
+
+If the base cases are not met, the function calculates the maximum amount of money that can be robbed from the current house. It considers two possibilities: robbing the current house and the house two steps back, or not robbing the previous house. It recursively calls `helpRob` with updated parameters to calculate the maximum amount of money and then stores the result in `dp` for future reference.
+<br/>
+
+After defining `helpRob`, the function checks for two special cases: if there is only one house, the maximum amount of money that can be robbed is the amount in that house; if there are only two houses, the maximum amount of money that can be robbed is the larger amount of the two houses.
+<br/>
+
+If neither of the special cases is met, the function proceeds to calculate the maximum amount of money that can be robbed from the first half and the second half of the houses separately. It calls `helpRob` with appropriate parameters and stores the results in `first` and `second`.
+<br/>
+
+Finally, the function returns the maximum amount of money that can be robbed from either the first half or the second half of the houses, whichever is larger.
+<br/>
+
+In summary, the `rob` function solves this challenge by calculating the maximum amount of money that can be robbed from a given array of houses. It uses a dynamic programming approach and a helper function to determine the optimal strategy for robbing houses without alerting the police.
+<br/>
+<br/>

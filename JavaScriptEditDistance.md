@@ -120,3 +120,48 @@ Replace a character
 `};`
 <br/>
 <br/>
+
+## Explanation:
+
+I've coded a function called `minDistance` that calculates the minimum number of operations required to transform one word into another. It takes two input parameters: `word1` and `word2`.
+<br/>
+
+Inside the function, a `Map` called `memo` is created to store previously computed results.
+<br/>
+
+The function `run` is defined within `minDistance`, which represents the recursive calculation. It takes two parameters: `w1` and `w2`.
+<br/>
+
+Three variables, `insert`, `del`, and `replace`, are initialized with `Infinity`. These variables will store the minimum number of operations required for each operation type.
+<br/>
+
+The function checks if the result for the current combination of `w1` and `w2` is already present in the `memo` `Map`. If it is, the previously computed result is returned.
+<br/>
+
+If both `w1` and `w2` have reached the end of their respective words (`word1` and `word2`), the function returns `0`, as no further operations are needed.
+<br/>
+
+If the characters at `w1` and `w2` are the same, the function recursively calls `run` with incremented `w1` and `w2` to proceed to the next characters.
+<br/>
+
+If `w2` is less than the length of `word2`, the function recursively calls `run` with the same `w1` and incremented `w2` to simulate an insert operation.
+<br/>
+
+If `w1` is less than the length of `word1`, the function recursively calls `run` with incremented `w1` and the same `w2` to simulate a delete operation.
+<br/>
+
+If both `w1` and `w2` are less than the lengths of `word1` and `word2` respectively, the function recursively calls `run` with incremented `w1` and `w2` to simulate a replace operation.
+<br/>
+
+The minimum number of operations required among the three types (insert, delete, and replace) is calculated by taking the minimum among `insert`, `del`, and `replace` and adding `1` to it.
+<br/>
+
+The result is stored in the `memo` `Map` using the combination of `w1` and `w2` as the key.
+<br/>
+
+Finally, the result is returned as the output of the `minDistance` function.
+<br/>
+
+In summary, the `minDistance` function uses recursion and memoization to calculate the minimum number of operations required to transform one word into another. It considers insertions, deletions, and replacements of characters. The function stores previously computed results to optimize performance.
+<br/>
+<br/>

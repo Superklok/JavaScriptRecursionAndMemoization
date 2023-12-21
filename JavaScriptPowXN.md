@@ -71,3 +71,27 @@ Implement `pow(x, n)`, which calculates `x` raised to the power `n` (i.e., `xⁿ
 `};`
 <br/>
 <br/>
+
+## Explanation:
+
+I've defined a function called `myPow` that calculates the power of a given number. It takes two parameters, `x` and `n`, where `x` is the base number and `n` is the exponent.
+<br/>
+
+The function starts by checking if `n` is equal to `0`. If it is, the function returns `1`, as any number raised to the power of `0` is always `1`.
+<br/>
+
+If `n` is not `0`, the function checks if `n` is an even number by checking if `n` modulo `2` is equal to `0`. If it is, the function recursively calls itself with the base number `x` squared and the exponent `n` divided by `2`. This is possible because `x^n = (x^2)^(n/2)` when `n` is even.
+<br/>
+
+If `n` is not `0` and not even, the function checks if `n` is equal to `1`. If it is, the function returns the base number `x` itself, as any number raised to the power of `1` is itself.
+<br/>
+
+If `n` is not `0`, not even, and not `1`, the function checks if `n` is less than `0`. If it is, the function recursively calls itself with the base number `x` and the absolute value of `n`. This is possible because `x^(-n) = 1/(x^n)`.
+<br/>
+
+If none of the above conditions are met, the function returns the base number `x` multiplied by the function recursively called with the base number `x` and the exponent `n` decremented by `1`. This is possible because `x^n = x * x^(n-1)`.
+<br/>
+
+In summary, the `myPow` function calculates the power of a given number by using recursion and applying different mathematical properties depending on the value of the exponent.
+<br/>
+<br/>
