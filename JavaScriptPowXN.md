@@ -1,78 +1,74 @@
 # JavaScript Pow(x, n)
+<br/>
 
-## Challenge:
-
+## Challenge
 Implement `pow(x, n)`, which calculates `x` raised to the power `n` (i.e., `xⁿ`).
-
-### 1<sup>st</sup> Example:
-
-`Input: x = 2.00000, n = 10`
-<br/>
-`Output: 1024.00000`
-
-### 2<sup>nd</sup> Example:
-
-`Input: x = 2.10000, n = 3`
-<br/>
-`Output: 9.26100`
-
-### 3<sup>rd</sup> Example:
-
-`Input: x = 2.00000, n = -2`
-<br/>
-`Output: 0.25000`
-<br/>
-`Explanation: 2⁻² = 1/2² = 1/4 = 0.25`
-
-### Constraints:
-
-`-100.0 < x < 100.0`
-<br/>
-`-2³¹ <= n <= 2³¹-1`
-<br/>
-`n` is an integer.
-<br/>
-`-10⁴ <= xⁿ <= 10⁴`
-
-## Solution:
-
-`const myPow = (x, n) => {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`if(n == 0) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return 1;`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`if(n % 2 == 0) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return myPow(x * x, n / 2);`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`if(n == 1) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return x;`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`if(n < 0) {`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return 1 / myPow(x, Math.abs(n));`
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`}`
-<br/>
-<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`return x * myPow(x, n - 1);`
-<br/>
-`};`
 <br/>
 <br/>
 
-## Explanation:
+### 1<sup>st</sup> Example
+
+```JavaScript
+Input: x = 2.00000, n = 10
+Output: 1024.00000
+```
+
+### 2<sup>nd</sup> Example
+
+```JavaScript
+Input: x = 2.10000, n = 3
+Output: 9.26100
+```
+
+### 3<sup>rd</sup> Example
+
+```JavaScript
+Input: x = 2.00000, n = -2
+Output: 0.25000
+Explanation: 2⁻² = 1/2² = 1/4 = 0.25
+```
+
+<br/>
+
+### Constraints
+
+```JavaScript
+-100.0 < x < 100.0
+-2³¹ <= n <= 2³¹-1
+-10⁴ <= xⁿ <= 10⁴
+```
+
+- `n` is an integer.
+
+<br/>
+
+## Solution
+
+```JavaScript
+const myPow = (x, n) => {
+    if (n == 0) {
+        return 1;
+    }
+
+    if (n % 2 == 0) {
+        return myPow(x * x, n / 2);
+    }
+
+    if (n == 1) {
+        return x;
+    }
+
+    if (n < 0) {
+        return 1 / myPow(x, Math.abs(n));
+    }
+
+    return x * myPow(x, n - 1);
+};
+```
+
+<br/>
+
+## Explanation
 
 I've defined a function called `myPow` that calculates the power of a given number. It takes two parameters, `x` and `n`, where `x` is the base number and `n` is the exponent.
 <br/>
