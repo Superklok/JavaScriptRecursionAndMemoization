@@ -40,11 +40,8 @@ Explanation: '.*' means 'zero or more (*) of any character (.)'.
 
 ### Constraints
 
-```JavaScript
-1 <= s.length <= 20
-1 <= p.length <= 20
-```
-
+- `1 <= s.length <= 20`
+- `1 <= p.length <= 20`
 - `s` contains only lowercase English letters.
 - `p` contains only lowercase English letters, `'.'`, and `'*'`.
 - It is guaranteed for each appearance of the character `'*'`, there will be a previous valid character to match.
@@ -98,3 +95,22 @@ Finally, the `isMatch` function calls the `recurse` function with the starting i
 In summary, the `isMatch` function uses recursion to check if a string `s` matches a pattern `p` based on certain rules. It compares characters from `s` and `p` one by one, taking into account special characters like `.`, which can match any character, and `*`, which can match zero or more of the preceding character.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Implement Stack Using Queues)][Next]
+<br/>
+
+### :previous_track_button: [Previous (House Robber II)][Previous]
+<br/>
+
+### :play_or_pause_button: [More Recursion & Memoization Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptQueues/blob/main/JavaScriptImplementStackUsingQueues.md
+[Previous]: https://github.com/Superklok/JavaScriptRecursionAndMemoization/blob/main/JavaScriptHouseRobberII.md
+[More]: https://github.com/Superklok/JavaScriptRecursionAndMemoization
+[Return]: https://github.com/Superklok/LearnJavaScript

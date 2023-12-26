@@ -1,4 +1,4 @@
-# JavaScript Best Time to Buy and Sell Stock
+# JavaScript Best Time to Buy & Sell Stock
 <br/>
 
 ## Challenge
@@ -32,10 +32,8 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 
 ### Constraints
 
-```JavaScript
-1 <= prices.length <= 10⁵
-0 <= prices[i] <= 10⁴
-```
+- `1 <= prices.length <= 10⁵`
+- `0 <= prices[i] <= 10⁴`
 
 <br/>
 
@@ -96,3 +94,22 @@ The function returns the maximum profit that was calculated.
 In summary, the `maxProfit` function calculates the maximum profit that can be made by buying and selling a stock at different prices. It iterates through the prices array, keeps track of the lowest buying price and the maximum profit, and returns the maximum profit achieved.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Edit Distance)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Pow(x, n))][Previous]
+<br/>
+
+### :play_or_pause_button: [More Recursion & Memoization Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptRecursionAndMemoization/blob/main/JavaScriptEditDistance.md
+[Previous]: https://github.com/Superklok/JavaScriptRecursionAndMemoization/blob/main/JavaScriptPowXN.md
+[More]: https://github.com/Superklok/JavaScriptRecursionAndMemoization
+[Return]: https://github.com/Superklok/LearnJavaScript

@@ -37,10 +37,8 @@ Output: 3
 
 ### Constraints
 
-```JavaScript
-1 <= nums.length <= 100
-0 <= nums[i] <= 1000
-```
+- `1 <= nums.length <= 100`
+- `0 <= nums[i] <= 1000`
 
 <br/>
 
@@ -111,3 +109,22 @@ Finally, the function returns the maximum amount of money that can be robbed fro
 In summary, the `rob` function solves this challenge by calculating the maximum amount of money that can be robbed from a given array of houses. It uses a dynamic programming approach and a helper function to determine the optimal strategy for robbing houses without alerting the police.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (Regular Expression Matching)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Edit Distance)][Previous]
+<br/>
+
+### :play_or_pause_button: [More Recursion & Memoization Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptRecursionAndMemoization/blob/main/JavaScriptRegularExpressionMatching.md
+[Previous]: https://github.com/Superklok/JavaScriptRecursionAndMemoization/blob/main/JavaScriptEditDistance.md
+[More]: https://github.com/Superklok/JavaScriptRecursionAndMemoization
+[Return]: https://github.com/Superklok/LearnJavaScript

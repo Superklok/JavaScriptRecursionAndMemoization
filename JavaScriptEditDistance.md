@@ -38,10 +38,7 @@ Explanation: intention -> inention (remove 't')
 
 ### Constraints
 
-```JavaScript
-0 <= word1.length, word2.length <= 500
-```
-
+- `0 <= word1.length, word2.length <= 500`
 - `word1` and `word2` consist of lowercase English letters.
 
 <br/>
@@ -138,3 +135,22 @@ Finally, the result is returned as the output of the `minDistance` function.
 In summary, the `minDistance` function uses recursion and memoization to calculate the minimum number of operations required to transform one word into another. It considers insertions, deletions, and replacements of characters. The function stores previously computed results to optimize performance.
 <br/>
 <br/>
+<br/>
+<br/>
+
+### :next_track_button: [Next (House Robber II)][Next]
+<br/>
+
+### :previous_track_button: [Previous (Best Time To Buy & Sell Stock)][Previous]
+<br/>
+
+### :play_or_pause_button: [More Recursion & Memoization Challenges][More]
+<br/>
+
+### :eject_button: [Return to Course Outline][Return]
+<br/>
+
+[Next]: https://github.com/Superklok/JavaScriptRecursionAndMemoization/blob/main/JavaScriptHouseRobberII.md
+[Previous]: https://github.com/Superklok/JavaScriptRecursionAndMemoization/blob/main/JavaScriptBestTimeToBuyAndSellStock.md
+[More]: https://github.com/Superklok/JavaScriptRecursionAndMemoization
+[Return]: https://github.com/Superklok/LearnJavaScript
