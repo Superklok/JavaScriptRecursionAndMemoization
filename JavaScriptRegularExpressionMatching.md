@@ -55,11 +55,11 @@ const isMatch = (s, p) => {
        const recurse = (i, j) => {
               const matchesChar = i < s.length && (p[j] === '.' || s[i] === p[j]);
 
-              if(i === s.length && j === p.length) {
+              if (i === s.length && j === p.length) {
                      return true;
               }
 
-              if(j + 1 < p.length && p[j + 1] === '*') {
+              if (j + 1 < p.length && p[j + 1] === '*') {
                      return recurse(i, j + 2) || matchesChar && recurse(i + 1, j);
               } else {
                      return matchesChar && recurse(i + 1, j + 1);

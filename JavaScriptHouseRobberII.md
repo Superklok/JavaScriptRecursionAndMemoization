@@ -49,33 +49,34 @@ const rob = (nums) => {
     let dp = [];
 
     const helpRob = (start, house) => {
-        if(house < start.start) {
+        if (house < start.start) {
             return 0;
         }
 
-        if(dp[house] >= 0) {
+        if (dp[house] >= 0) {
             return dp[house];
         }
 
-        dp[house] = Math.max((nums[house] + helpRob({start: start.start}, house-2)),
-        helpRob({start: start.start}, house-1));
+        dp[house] = Math.max((nums[house] +
+                    helpRob({start: start.start}, house - 2)),
+                    helpRob({start: start.start}, house - 1));
 
         return dp[house];
     };
 
-    if(nums.length === 1) {
+    if (nums.length === 1) {
         return nums[0];
     }
 
-    if(nums.length === 2) {
+    if (nums.length === 2) {
         return Math.max(nums[0], nums[1]);
     }
 
-    let first = helpRob({start: 0}, nums.length-2);
+    let first = helpRob({start: 0}, nums.length - 2);
 
     dp = [];
 
-    let second = helpRob({start: 1}, nums.length-1);
+    let second = helpRob({start: 1}, nums.length - 1);
 
     return Math.max(first, second);
 };
