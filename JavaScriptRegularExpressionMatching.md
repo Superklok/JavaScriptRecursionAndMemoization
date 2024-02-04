@@ -24,8 +24,9 @@ Explanation: 'a' does not match the entire string 'aa'.
 ```JavaScript
 Input: s = 'aa', p = 'a*'
 Output: true
-Explanation: '*' means zero or more of the preceding element,
-             'a'. Therefore, by repeating 'a' once, it becomes 'aa'.
+Explanation: '*' means zero or more of the preceding
+             element, 'a'. Therefore, by repeating 'a'
+             once, it becomes 'aa'.
 ```
 
 ### 3<sup>rd</sup> Example
